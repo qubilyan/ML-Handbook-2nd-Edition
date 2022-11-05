@@ -1,3 +1,4 @@
+
 /*
  * ====================================================================
  * 
@@ -48,60 +49,20 @@
  * SUCH DAMAGE.
  * ====================================================================
  */
-
 package net.sf.classifier4J;
 
 /**
- * 
- * Implementaion of the {@link net.sf.classifier4J.IClassifier#setMatchCutoff(double)} 
- * and {@link net.sf.classifier4J.IClassifier#isMatch(String)} methods.
+ * A classifier exception
  *
- * @author Nick Lothian
- *
+ * @author Peter Leschev
  */
-public abstract class AbstractClassifier implements IClassifier {
+public class ClassifierException extends Exception {
 
-    protected double cutoff = IClassifier.DEFAULT_CUTOFF;
-
-    /**
-     *
-     * <p>This implementation throws an IllegalArgumentException if cutoff is
-     * greater than 1 or less than 0.</p>
-     *
-     *
-     * @param cutoff Used to determine the mimimum probability that should be classified as a match
-     * @throws IllegalArgumentException if if cutoff is greater than 1 or less than 0
-     *
-     */
-    public void setMatchCutoff(double cutoff) {
-        if (cutoff > 1 || cutoff < 0) {
-            throw new IllegalArgumentException("Cutoff must be equal or less than 1 and greater than or equal to 0");
-        }
-
-        this.cutoff = cutoff;
+    public ClassifierException(String message) {
+        super(message);
     }
 
-    public double getMatchCutoff() {
-        return this.cutoff;
+    public ClassifierException(String message, Throwable throwable) {
+        super(message, throwable);
     }
-
-    /**
-     * <p>Implementation of {@link net.sf.classifier4J.IClassifier#isMatch(String)}
-     * method.</p>
-     *
-     * @see net.sf.classifier4J.IClassifier#isMatch(String)
-     */
-    public boolean isMatch(String input) throws ClassifierException {
-        double matchProbability = classify(input);
-
-        return isMatch(matchProbability);
-    }
-
-    /**
-     * @see net.sf.classifier4J.IClassifier#isMatch(double)
-     */
-    public boolean isMatch(double matchProbability) {
-        return (matchProbability >= cutoff);
-    }
-
 }

@@ -1,3 +1,4 @@
+
 /*
  * ====================================================================
  * 
@@ -51,57 +52,55 @@
 
 package net.sf.classifier4J;
 
-/**
- * 
- * Implementaion of the {@link net.sf.classifier4J.IClassifier#setMatchCutoff(double)} 
- * and {@link net.sf.classifier4J.IClassifier#isMatch(String)} methods.
- *
- * @author Nick Lothian
- *
- */
-public abstract class AbstractClassifier implements IClassifier {
+import net.sf.classifier4J.util.*;
 
-    protected double cutoff = IClassifier.DEFAULT_CUTOFF;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class CustomizableStopWordProvider implements IStopWordProvider {
+
+    private Resource resource;
+    private String[] words;
+
+    public static final String DEFAULT_STOPWORD_PROVIDER_RESOURCENAME = "defaultStopWords.txt";
 
     /**
-     *
-     * <p>This implementation throws an IllegalArgumentException if cutoff is
-     * greater than 1 or less than 0.</p>
-     *
-     *
-     * @param cutoff Used to determine the mimimum probability that should be classified as a match
-     * @throws IllegalArgumentException if if cutoff is greater than 1 or less than 0
-     *
+     * 
+     * @param filename Identifies the name of a textfile on the classpath that contains
+     * a list of stop words, one on each line
      */
-    public void setMatchCutoff(double cutoff) {
-        if (cutoff > 1 || cutoff < 0) {
-            throw new IllegalArgumentException("Cutoff must be equal or less than 1 and greater than or equal to 0");
+    public CustomizableStopWordProvider(String resourcename) throws IOException {
+        resource = new Resource(resourcename);
+        
+        init();
+    }
+
+    public CustomizableStopWordProvider() throws IOException {
+        this(DEFAULT_STOPWORD_PROVIDER_RESOURCENAME);
+    }
+
+    protected void init() throws IOException {
+        ArrayList wordsLst = new ArrayList();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(resource.getInputStream()));
+        
+        String word;
+        while ((word = reader.readLine()) != null) {
+            wordsLst.add(word.trim());
         }
-
-        this.cutoff = cutoff;
-    }
-
-    public double getMatchCutoff() {
-        return this.cutoff;
-    }
-
-    /**
-     * <p>Implementation of {@link net.sf.classifier4J.IClassifier#isMatch(String)}
-     * method.</p>
-     *
-     * @see net.sf.classifier4J.IClassifier#isMatch(String)
-     */
-    public boolean isMatch(String input) throws ClassifierException {
-        double matchProbability = classify(input);
-
-        return isMatch(matchProbability);
+        
+        words = (String[]) wordsLst.toArray(new String[wordsLst.size()]);
+        
+        Arrays.sort(words);
     }
 
     /**
-     * @see net.sf.classifier4J.IClassifier#isMatch(double)
+     * @see net.sf.classifier4J.IStopWordProvider#isStopWord(String)
      */
-    public boolean isMatch(double matchProbability) {
-        return (matchProbability >= cutoff);
+    public boolean isStopWord(String word) {
+        return (Arrays.binarySearch(words, word) >= 0);
     }
 
 }
