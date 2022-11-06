@@ -43,22 +43,4 @@
  * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
  * USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
- * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
- * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- * SUCH DAMAGE.
- * ====================================================================
- */
-
-package net.sf.classifier4J;
-
-/**
- * @author Nick Lothian
- * @author Peter Leschev
- */
-public interface ITrainable {
-    public void teachMatch(String input) throws ClassifierException;
-    public void teachMatch(String category, String input) throws ClassifierException;
-
-    public void teachNonMatch(String input) throws ClassifierException;
-    public void teachNonMatch(String category, String input) throws ClassifierException;
-}
+ * OR TORT (INCLUDING NEGLIGEN
