@@ -159,4 +159,11 @@ public class DefaultTokenizer implements ITokenizer {
         if (customTokenizerRegExp != null) {
             toStringBuilder = toStringBuilder.append("customTokenizerRegExp", customTokenizerRegExp);
         } else if (tokenizerConfig == BREAK_ON_WORD_BREAKS) {
-  
+            toStringBuilder = toStringBuilder.append("tokenizerConfig", "BREAK_ON_WORD_BREAKS");
+        } else if (tokenizerConfig == BREAK_ON_WHITESPACE) {
+            toStringBuilder = toStringBuilder.append("tokenizerConfig", "BREAK_ON_WHITESPACE");
+        }
+
+        return toStringBuilder.toString();
+    }
+}
