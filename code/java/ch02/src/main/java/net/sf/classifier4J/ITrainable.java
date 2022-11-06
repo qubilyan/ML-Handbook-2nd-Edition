@@ -43,25 +43,4 @@
  * LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF
  * USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
- * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
- * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
- * SUCH DAMAGE.
- * ====================================================================
- */
-package net.sf.classifier4J;
-
-/** 
- * @author Peter Leschev
- */
-public interface ITokenizer {
-
-    /**
-     * <p>Splits up the string passed into the tokens which
-     * have individual probabilities.</p>
-         *
-         * @return Should never return null, rather it should return an empty array of
-         *         Strings if there aren't any elements to return.
-     */
-    public String[] tokenize(String input);
-
-}
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) AR
