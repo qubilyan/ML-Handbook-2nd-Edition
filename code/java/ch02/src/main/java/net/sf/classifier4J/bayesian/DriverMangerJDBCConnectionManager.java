@@ -1,6 +1,7 @@
+
 /*
  * ====================================================================
- *
+ * 
  * The Apache Software License, Version 1.1
  *
  * Copyright (c) 2003 Nick Lothian. All rights reserved.
@@ -10,7 +11,7 @@
  * are met:
  *
  * 1. Redistributions of source code must retain the above copyright
- *    notice, this list of conditions and the following disclaimer.
+ *    notice, this list of conditions and the following disclaimer. 
  *
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in
@@ -18,20 +19,20 @@
  *    distribution.
  *
  * 3. The end-user documentation included with the redistribution, if
- *    any, must include the following acknowlegement:
- *       "This product includes software developed by the
+ *    any, must include the following acknowlegement:  
+ *       "This product includes software developed by the 
  *        developers of Classifier4J (http://classifier4j.sf.net/)."
  *    Alternately, this acknowlegement may appear in the software itself,
  *    if and wherever such third-party acknowlegements normally appear.
  *
- * 4. The name "Classifier4J" must not be used to endorse or promote
- *    products derived from this software without prior written
- *    permission. For written permission, please contact
+ * 4. The name "Classifier4J" must not be used to endorse or promote 
+ *    products derived from this software without prior written 
+ *    permission. For written permission, please contact   
  *    http://sourceforge.net/users/nicklothian/.
  *
- * 5. Products derived from this software may not be called
- *    "Classifier4J", nor may "Classifier4J" appear in their names
- *    without prior written permission. For written permission, please
+ * 5. Products derived from this software may not be called 
+ *    "Classifier4J", nor may "Classifier4J" appear in their names 
+ *    without prior written permission. For written permission, please 
  *    contact http://sourceforge.net/users/nicklothian/.
  *
  * THIS SOFTWARE IS PROVIDED ``AS IS'' AND ANY EXPRESSED OR IMPLIED
@@ -51,53 +52,62 @@
 
 package net.sf.classifier4J.bayesian;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import javax.sql.DataSource;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
  * @author Nick Lothian
  *
  */
-public class DataSourceJDBCConnectionManager implements IJDBCConnectionManager {
+public class DriverMangerJDBCConnectionManager implements IJDBCConnectionManager {
 
-    String datasourceContext;
-    DataSource dataSource;
+    String dbURL;
+    String dbUser;
+    String dbPassword;
 
-    public DataSourceJDBCConnectionManager(String ctx) throws NamingException, IllegalArgumentException {
-        this.datasourceContext = ctx;
-        Context context = new InitialContext();
-        if (context == null) {
-            throw new NamingException("No JNDI Inital Context Found");
-        }
-        dataSource = (DataSource) context.lookup(datasourceContext);
-        if (dataSource == null) {
-            throw new IllegalArgumentException("Could not find datasource");
-        }
-
+    public DriverMangerJDBCConnectionManager(String url, String user, String password) {
+        this.dbURL = url;
+        this.dbUser = user;
+        this.dbPassword = password;
     }
 
-    public String getDatasourceContext() {
-        return datasourceContext;
+    public String getDbPassword() {
+        return dbPassword;
+    }
+
+    public String getDbURL() {
+        return dbURL;
+    }
+
+    public String getDbUser() {
+        return dbUser;
+    }
+
+    public void setDbPassword(String string) {
+        dbPassword = string;
+    }
+
+    public void setDbURL(String string) {
+        dbURL = string;
+    }
+
+    public void setDbUser(String string) {
+        dbUser = string;
     }
 
     /**
      * @see net.sf.classifier4J.bayesian.IJDBCConnectionManager#getConnection()
      */
     public Connection getConnection() throws SQLException {
-        return dataSource.getConnection();
+        return DriverManager.getConnection(dbURL, dbUser, dbPassword);
     }
 
     /**
      * @see net.sf.classifier4J.bayesian.IJDBCConnectionManager#returnConnection(Connection con)
      */
     public void returnConnection(Connection con) throws SQLException {
-        if (con != null) {
-            con.close();
-        }        
+        con.close();
     }
 
 }
