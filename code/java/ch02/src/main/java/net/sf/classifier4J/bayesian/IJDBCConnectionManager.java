@@ -1,3 +1,4 @@
+
 /*
  * ====================================================================
  * 
@@ -48,45 +49,19 @@
  * SUCH DAMAGE.
  * ====================================================================
  */
+
 package net.sf.classifier4J.bayesian;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 /**
- * Interface used by BayesianClassifier to determine the probability of each 
- * word based on a particular category.
- *
  * @author Nick Lothian
- * @author Peter Leschev
+ *
  */
-public interface ICategorisedWordsDataSource extends IWordsDataSource {
-    /**
-     * @param category the category to check against
-     * @param word The word to calculate the probability of
-     * @return The word probability if the word exists, null otherwise;
-         *
-         * @throws WordsDataSourceException If there is a fatal problem. For 
-         *         example, the database is unavailable
-     */
-    public WordProbability getWordProbability(String category, String word) throws WordsDataSourceException;
+public interface IJDBCConnectionManager {
 
-    /**
-     * Add a matching word to the data source
-     * 
-     * @param category the category add the match to
-     * @param word the word that matches	 
-         *
-         * @throws WordsDataSourceException If there is a fatal problem. For 
-         *         example, the database is unavailable
-     */
-    public void addMatch(String category, String word) throws WordsDataSourceException;
+    public Connection getConnection() throws SQLException;
+    public void returnConnection(Connection con) throws SQLException;
 
-    /**
-     * Add a non-matching word to the data source
-     *
-     * @param category the category add the non-match to 
-     * @param word the word that does not match
-         *
-         * @throws WordsDataSourceException If there is a fatal problem. For 
-         *         example, the database is unavailable
-     */
-    public void addNonMatch(String category, String word) throws WordsDataSourceException;
 }
