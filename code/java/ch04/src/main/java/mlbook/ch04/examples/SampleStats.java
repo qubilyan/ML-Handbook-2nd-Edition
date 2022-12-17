@@ -114,4 +114,51 @@ public class SampleStats {
         return ss.getVariance();
     }
 
-    public double getStandard
+    public double getStandardDeviation(List<Double> nums) {
+        double[] pNumList = nums.stream().mapToDouble(Double::doubleValue).toArray();
+        SummaryStatistics ss = new SummaryStatistics();
+        for(int i = 0; i < pNumList.length -1 ; i++ ) {
+            ss.addValue(pNumList[i]);
+        }
+        return ss.getStandardDeviation();
+    }
+
+    public static void main(String[] args) throws Exception {
+        List<Integer> nums = new SampleStats().loadFile("/Users/jasebell/bookwork/mlbook2ndedition/data/ch04/stats.txt");
+        List<Double> numsd = new SampleStats().loadFileToDouble("/Users/jasebell/bookwork/mlbook2ndedition/data/ch04/stats.txt");
+
+        System.out.println(nums);
+
+        int minVal = Collections.min(nums);
+        int maxVal = Collections.max(nums);
+        int total = new SampleStats().getSum(nums);
+        double total2 = new SampleStats().getSumWithArrays(numsd);
+        double avg = (double)total2/nums.size();
+        double mean = new SampleStats().getMean(numsd);
+        double hmean = new SampleStats().getHarmonicMean(numsd);
+        double gmean = new SampleStats().getGeometricMean(numsd);
+        double[] mode = new SampleStats().getMode(numsd);
+        double median = new SampleStats().getMeadian(numsd);
+        double iqr = new SampleStats().getIQR(numsd);
+        double variance = new SampleStats().getVariance(numsd);
+        double sd = new SampleStats().getStandardDeviation(numsd);
+
+
+        System.out.println("Minimum value: " + minVal);
+        System.out.println("Maximum value: " + maxVal);
+        System.out.println("Total value (getSum): " + total);
+        System.out.println("Total value (getSumWithArrays): " + total2);
+        System.out.println("Mean value (manual method): " + avg);
+        System.out.println("Mean value (getMean): " + mean);
+        System.out.println("Harmonic mean value (getHarmonicMean): " + hmean);
+        System.out.println("Geometric mean value (getGeometricMean): " + gmean);
+        System.out.println("Mode (getMode): " + mode);
+        System.out.println("Median (getMedian): " + median);
+        System.out.println("IQR (getIQR): " + iqr);
+        System.out.println("Variance (getVariance): " + variance);
+        System.out.println("Standard Deviation (getStandardDeviation): " + sd);
+
+
+    }
+}
+
