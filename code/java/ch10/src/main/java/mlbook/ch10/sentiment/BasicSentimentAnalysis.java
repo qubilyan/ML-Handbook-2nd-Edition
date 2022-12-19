@@ -75,3 +75,9 @@ public class BasicSentimentAnalysis {
 
     public static void main(String[] args) {
         BasicSentimentAnalysis bsa = new BasicSentimentAnalysis();
+        List<String> sentences = bsa.loadSentences("/path/to/data/ch10/sentiment/sentences.txt");
+        bsa.runSentimentAnalysis(sentences);
+    }
+
+
+}
