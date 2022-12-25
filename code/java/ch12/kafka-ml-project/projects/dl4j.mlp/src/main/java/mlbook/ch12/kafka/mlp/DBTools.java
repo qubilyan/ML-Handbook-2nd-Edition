@@ -46,4 +46,21 @@ public class DBTools {
 
     public static void writeResultsToDB(String uuid, double evalsplit, long exectime, double accuracy, String output, String model_type){
         try {
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/mlchapter12?user=xxxx&passwo
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/mlchapter12?user=xxxx&password=xxxx");
+            PreparedStatement pstmt = conn.prepareStatement("INSERT INTO training_log VALUES (null, ?, NOW(), ?, ?, ?, ?, ?)");
+            pstmt.clearParameters();
+            pstmt.setString(1, uuid);
+            pstmt.setDouble(2, evalsplit);
+            pstmt.setLong(3, exectime);
+            pstmt.setDouble(4, accuracy);
+            pstmt.setString(5, output);
+            pstmt.setString(6,model_type);
+            pstmt.execute();
+            pstmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+}
