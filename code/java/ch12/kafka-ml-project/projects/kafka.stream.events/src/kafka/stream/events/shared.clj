@@ -30,4 +30,11 @@
       (.toByteArray out))))
 
 (defn key-name-function [transform-type]
-  (log/info (str "travelport/"
+  (log/info (str "travelport/" transform-type "/" (f/unparse date-format (t/now)) "/" (.toString (java.util.UUID/randomUUID)) ".csv.gz"))
+  (str "travelport/" transform-type "/" (f/unparse date-format (t/now)) "/" (.toString (java.util.UUID/randomUUID)) ".csv.gz"))
+
+(defn upload-file-to-s3 [file-content transform-type]
+  (println "Upload to S3")
+  (put-object :bucket-name (env :s3-bucket)
+              :key (key-name-function transform-type)
+              :input-stream (java.io.ByteArrayInputStream. file-content)))
