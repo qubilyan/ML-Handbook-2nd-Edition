@@ -1,10 +1,17 @@
-(ns kafka.stream.prediction.decisiontree
-  (:require [kafka.stream.prediction.db :as db]
+
+(ns prediction.http.api.decisiontree
+  (:require [prediction.http.api.db :as db]
             [clj-time.core :as t]
             [clj-time.format :as f])
   (:use [clojure.java.shell :only [sh]])
   (:import [java.io ByteArrayInputStream InputStream InputStreamReader BufferedReader]
            [weka.core Instances SerializationHelper]))
+
+(def script-path "/home/jason/work/strata-2018-kafka-dl4j-clojure/projects/dl4j.mlp/scripts/rundtr.sh")
+
+(defn run-model-build []
+  (sh script-path)
+  "Decision Tree built.")
 
 (defn get-most-accurate-model []
   (first (db/load-accurate-model-by-type {:model-type "dtr"})))
