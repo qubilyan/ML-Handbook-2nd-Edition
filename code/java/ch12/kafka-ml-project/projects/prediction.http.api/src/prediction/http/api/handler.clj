@@ -44,4 +44,9 @@
             (GET "predict/dtr/:d" []
                  :path-params [d :- String]
                  :summary "Runs a prediction against the decision tree  model"
-                 (ok (js
+                 (ok (json/write-str (dtr/predict-decision-tree d))))
+
+            (GET "/predict/slr/:d" []
+                 :path-params [d :- String]
+                 :summary "Runs a prediction against simple linear regression models"
+                 (ok (json/write-str (slr/predict-simple-linear d)))))))
