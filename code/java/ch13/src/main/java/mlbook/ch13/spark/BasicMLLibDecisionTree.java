@@ -42,4 +42,8 @@ public class BasicMLLibDecisionTree {
                 predictionAndLabel.filter(pl -> !pl._1().equals(pl._2())).count() / (double) testData.count();
 
         System.out.println("Prediction test error value: " + predictionTestErrorValue);
- 
+        System.out.println("Output classification tree:\n" + model.toDebugString());
+    }
+}
+
+
