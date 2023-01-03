@@ -28,4 +28,30 @@ public class BasicSparkStreamingKafka {
 
         // Create context with a 2 seconds batch interval
         SparkConf sparkConf = new SparkConf().setAppName("BasicSparkStreamingKafka");
-        JavaStream
+        JavaStreamingContext streamingContext = new JavaStreamingContext(sparkConf, Durations.seconds(5));
+
+        Set<String> topics = new HashSet<>(Arrays.asList(topicName.split(",")));
+        Map<String, Object> params = new HashMap<>();
+        params.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, brokers);
+        params.put(ConsumerConfig.GROUP_ID_CONFIG, groupId);
+        params.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        params.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+
+
+        JavaInputDStream<ConsumerRecord<String, String>> kafkaMessages = KafkaUtils.createDirectStream(
+                streamingContext,
+                LocationStrategies.PreferConsistent(),
+                ConsumerStrategies.Subscribe(topics, params));
+
+        // Get the lines, split them into words, count the words and print
+        JavaDStream<String> lines = kafkaMessages.map(ConsumerRecord::value);
+        JavaDStream<String> words = lines.flatMap(line -> Arrays.asList(SPACE.split(line)).iterator());
+        JavaPairDStream<String, Integer> wordCounts = words.mapToPair(s -> new Tuple2<>(s, 1))
+                .reduceByKey((i1, i2) -> i1 + i2);
+        wordCounts.print();
+
+        // Start the computation
+        streamingContext.start();
+        streamingContext.awaitTermination();
+    }
+}
