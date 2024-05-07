@@ -71,4 +71,34 @@ The Human Touch
 
 Outcomes will change, data will change and requirements will change. Machine learning cannot be seen as the write it once solution to problems. Also it will require human hands to and intuition to write these algorithms to start off with. Remember that Arthur Samuel’s checkers program was basically to improve on what the human had already taught it. It all started off with a human first and it’s important that we get this message across.
 
-Duri
+During the course of this book you will see me talk about the importance of knowing what the question is we are trying to answer, the cornerstone of any data project, this starts with us having open discussions and planning (more of this in chapter 2).
+
+It’s only in very rare circumstances that you can throw data at a machine learning routine and it start to provide insight.
+
+Uses For Machine Learning
+
+So what can we use machine learning for? Quite a lot really, when you break things down and see how it’s being used at the moment.
+
+Software
+
+Spam Detection
+
+“I don’t like Spam!” said the Monty Python team. For all the junk mail that gets caught there’s a good chance there’s a Bayesian classification filtering doing the work to catch it. Since the early days of SpamAssassin to Google’s work in Google Mail there’s been some form of learning attempting to figure out whether a message is good or bad.
+
+Spam detection is one of the classic uses of machine learning and over time the algorithms have got better and better. Think about the email program that you use when it sees a message it thinks is junk it will ask you to confirm whether it is or isn’t. If you decide it is the system will learn from that message and learn from the experience. Future messages will, hopefully, be treated correctly from then on.
+
+Voice Recognition
+
+Apple’s Siri service that is on many iOS devices is another example of software machine learning. You ask Siri something and it works out what you want to do. This may be sending a tweet or a text message or it could be setting a calendar appointment, if Siri decides it can’t work out what you’re trying to do it will perform a Google search on the phrase you said.
+
+It’s an impressive service that is using a device and cloud based statistical model to analyze your phrase, the order of the words and come up with a resulting action to do on the device.
+
+Trading
+
+There are lots of trading platforms aiming to help users to do better stock trades. This comes with a large amount of analysis, computation and recommendation. From a machine learning perspective decisions are being made to you on whether to buy or sell a stock based at the current price. It takes in to account the historical opening and closing prices and the buy sell volumes of that stock.
+
+With four pieces of information (the low and high price plus the opening and closing price of the day) a machine learning algorithm can learn. Apply this will all stocks and you have a system.
+
+Bitcoins are a good example of trading; the virtual coins are bought and sold on what price the market is willing to buy against what existing coin owners are willing to sell at.
+
+The press is much more interested in algorithmic trading especially of the high-speed variety. The ability to perform many thousands of trades a second based on algorithmic prediction is very compelling. A huge amount of money is plough
