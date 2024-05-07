@@ -37,4 +37,38 @@ So with a computer running a set of tasks the experience should be leading to pe
 
 To Sum Up
 
-Machine learning is a branch of artificial intelligence. Using computing we design systems that can learn from data in either a manner of being trained or not. The systems may learn and improve with experience and with time
+Machine learning is a branch of artificial intelligence. Using computing we design systems that can learn from data in either a manner of being trained or not. The systems may learn and improve with experience and with time refine a model that can be used to predict outcomes of questions based on the previous learning.
+
+
+
+Algorithmic Types For Machine Learning
+
+There are a number of different methods that can be employed to machine learning. The deciding factor on what algorithm to use is really based on the required output. As you work through the chapters you’ll see the different algorithm types being put to work.
+
+Supervised Learning
+
+When we talk about supervised learning we are working a set of labeled training data. For every example in the training data we have an input object and an output object. An example would be classifying Twitter data (I’ll be using Twitter data lot in the final two chapters) lets assume we have the following data from Twitter, this would be our input data objects.
+
+Really loving the new St Vincent album!
+#fashion I’m selling my Louboutins! Who’s interested? #louboutins
+I’ve got my Hadoop cluster working on a load of data. #data
+In order for our supervised learning classifier to know the outcome result of each tweet we have to manually put the answers in, for clarity I’ve added the resulting output object at the start of the line.
+
+music​​Really loving the new St Vincent album!
+clothing​#fashion I’m selling my Louboutins! Who’s interested? #louboutins
+bigdata​​I’ve got my Hadoop cluster working on a load of data. #data
+Obviously for the classifier to make any sense of the data when run properly we’ll have to manually work on a lot more input data. What we have though is a training set that can be used for later classification of data.
+
+There are issues with supervised learning that have to be taken in to account. The bias-variance dilemma is one of them, how the machine-learning model performs accurately against different training sets. With high bias models with restricted learning or high variance, which learn with complexity against noisy training data. There’s a trade off between the two. The key is where to settle with the trade off.
+
+Unsupervised Learning
+
+On the opposite side of the coin, unsupervised learning is where we let the algorithm just find a hidden pattern in a load of data. There’s no error in the solution we propose it’s just a case of running the machine-learning algorithm and seeing what comes out.
+
+The mention of unsupervised learning may be more a case of just data mining. If you’re looking at clustering data then there’s a good chance you’re going to spend a lot of time with unsupervised learning.
+
+The Human Touch
+
+Outcomes will change, data will change and requirements will change. Machine learning cannot be seen as the write it once solution to problems. Also it will require human hands to and intuition to write these algorithms to start off with. Remember that Arthur Samuel’s checkers program was basically to improve on what the human had already taught it. It all started off with a human first and it’s important that we get this message across.
+
+Duri
