@@ -101,4 +101,28 @@ With four pieces of information (the low and high price plus the opening and clo
 
 Bitcoins are a good example of trading; the virtual coins are bought and sold on what price the market is willing to buy against what existing coin owners are willing to sell at.
 
-The press is much more interested in algorithmic trading especially of the high-speed variety. The ability to perform many thousands of trades a second based on algorithmic prediction is very compelling. A huge amount of money is plough
+The press is much more interested in algorithmic trading especially of the high-speed variety. The ability to perform many thousands of trades a second based on algorithmic prediction is very compelling. A huge amount of money is ploughed into these systems and how close they are to the main stock trading exchanges. Milliseconds of network latency can cost the trading house millions in trades that weren’t placed in time.
+
+About 70% of the trades done are performed by machine and not on the trading floor. This is all very well when things are going fine but when a problem occurs it can be minutes before the fault is noticed, by which time so many trades have happened. The flash crash in May 2010 is a good example of this when the Dow Jones industrial average dived by 600 points.
+
+Robotics
+
+Using machine learning robots can acquire skills or learn to adapt to the environment it is working in. Activities such as object placement, grasping objects and locomotion skills are achieved with either automated learning or learning via human intervention.
+
+With the increasing amount of sensors within robotics other algorithms could be employed outside of the robot for further analysis.
+
+Medicine And Healthcare
+
+The race is on for machine learning to be used in healthcare analytics. A number of startups are looking at the advantages of using machine learning with Big Data to provide healthcare professionals better-informed data to enable them to give better decisions.
+
+IBM’s famed Watson supercomputer, once used to win the television quiz programme Jeopardy against two human contestants, is being used to help doctors. Using Watson as a service on the cloud doctors can access learning on millions of pages of medical research and hundreds of thousands of pieces of information on medical evidence.
+
+With the number of consumers using smartphones and the related devices for collating a range of health information such as weight, heart rate, pulse, pedometers, blood pressure and even blood glucose monitoring we can now track and trace user health regularly and see patterns in dates and times. Machine learning systems can recommend healthier alternatives back to the user via the device.
+
+While it’s easy enough to analyze data the privacy of user health data is another story. Obviously some users are more concerned about how their data is used especially in the case of it being sold on to third party companies. Analytics in healthcare and medicine is new at the volumes that are now available but the privacy debate will be the ultimate deciding factor about how the algorithms will be used.
+
+
+
+Advertising
+
+Since the dawn of time there’s always been a brand trying to influence us to buy their produce. Post 1995 and the Internet gave marketers the chance to advertise direct to our screens without the need of television or large print campaigns. Remember the thought of cookies being on our computers with the potential to track us? The race to disable cookies from browsers and control whom saw our habits was big news at the tim
