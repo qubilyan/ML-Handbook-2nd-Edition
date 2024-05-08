@@ -125,4 +125,20 @@ While it’s easy enough to analyze data the privacy of user health data is anot
 
 Advertising
 
-Since the dawn of time there’s always been a brand trying to influence us to buy their produce. Post 1995 and the Internet gave marketers the chance to advertise direct to our screens without the need of television or large print campaigns. Remember the thought of cookies being on our computers with the potential to track us? The race to disable cookies from browsers and control whom saw our habits was big news at the tim
+Since the dawn of time there’s always been a brand trying to influence us to buy their produce. Post 1995 and the Internet gave marketers the chance to advertise direct to our screens without the need of television or large print campaigns. Remember the thought of cookies being on our computers with the potential to track us? The race to disable cookies from browsers and control whom saw our habits was big news at the time.
+
+Log file analysis is another tactic that advertisers use to see the things we are interested in. They are able to cluster results and segment user groups who may be interested in specific types of products. Couple that with mobile location awareness and you have direct-targeted adverts sent direct to you.
+
+There was a time this was considered a huge invasion of privacy but over time we’ve gotten use to the idea, now we’re even happy to check in at a location and announce our arrival. All very well but don’t think no one is watching, far from it, plenty will be learning from it. With some learning and analysis advertisers can do a very good job in figuring out where you’ll be on a given day and attempt to push offers your way.
+
+Retail And E-Commerce
+
+Machine learning is heavily used in retail, both e-commerce and bricks and mortar retail. At the high level the obvious use case is the loyalty card, you may be in possession of some. Retailers that issue loyalty cards often struggle to make sense of the data that’s coming back to them. Having worked with one company that analyzed this data I know the pain that supermarkets go through to get insight.
+
+In the UK supermarket giant Tesco are the name in the UK when it comes to a customer loyalty programme. The Tesco Clubcard is used heavily by customers and gives Tesco a great view of customer purchasing decisions. Data is collected from the point of sale (POS) and fed back to a data warehouse. In the early stages of the Clubcard the data couldn’t be mined fast enough, there was just too much. As processing methods improved over the years Tesco have a very good strategy along with marketing company Dunn Humby about customer behavior, shopping habits and encouraging customers to try similar products away from their usual choices.
+
+For the American equivalent we have to look at the likes of Target who run a similar sort of program that tracks every customer engagement with the brand. This might be via mail outs, web site visits or even in-store visits. From the data warehouse Target can fine-tune how to get the right communication method to the right customer in order for them to react to the brand. Target learned that not every customer wants an email or a SMS message, some still prefer receiving mail via the postal service.
+
+The uses for machine learning in retail are obvious, mining baskets and segmenting users are key processes in order to communicate the right message to the customer. On the other hand it can too accurate and cause headaches. Target’s baby club story, that was widely cited in the press as a big privacy danger in Big Data, showed us that machine learning basically can easily know that we’re creatures of habit and when those habits change they will get noticed.
+
+For all the positive uses of machine learning there are some urban myths too. Talk of retail and data mining the “beer and diapers” story is often mentioned and ass
