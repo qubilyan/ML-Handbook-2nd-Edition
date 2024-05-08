@@ -159,4 +159,36 @@ It’s early days for games companies to get machine learning into infrastructur
 
 The Internet Of Things
 
-Connected devices that can collate a
+Connected devices that can collate all manner of data are sprouting up all over the place. Device to device communication is hardly new but it hadn’t really hit the public minds until much later on. With the low cost of manufacture and distribution devices are in the home just as much as they are in industry.
+
+Uses include home automation, shopping, and smart meters for measuring energy consumption. These things are in their infancy and there’s still a lot of concern on the security aspects of these devices. In the same way phone based location is a concern we can pin point devices by their unique id’s and eventually associate them to a user.
+
+On the plus side the data is so rich that there’s plenty of opportunity to put machine learning in the heart of the data and learn from the devices output. This may be as simple as monitoring a house to sense ambient temperature, is it too hot or too cold?
+
+It’s very early days for the Internet of things but there’s a lot of groundwork happening and it’s leading to some interesting outcomes. With the likes of Arduino and Raspberry Pi computers it’s relatively cheap to get started with hardware and measuring the likes of motion, temperature and sound then extracting the data for analysis either collated or in real time.
+
+Languages For Machine Learning
+
+For this book I’ll be using the Java programming language for the working examples. The reasons are simple, it’s a widely used language and the libraries are well supported. What I’m not saying is that Java is the only language to be used for machine learning far from it. If you’re working for an existing organization you may be restricted to the languages used within it.
+
+Python
+
+The Python language has increased in usage as it’s easy to learn and easy to read. It also has some good machine learning libraries such as scikit-learn, PyML and pybrain. Jython was developed as a Python interpreter for the Java Virtual Machine (JVM) which may be worth investigating.
+
+R
+
+R is an open source staticstical programming language. The syntax is not the easiest to learn but I do encourage you to have a look at it. It also has a large number of machine learning packages and visualization tools. The RJava project allows Java programmers to access R functions from Java code.
+
+Matlab
+
+The Matlab language is used widely within academia for technical computing and algorithm creation. Like R it also has a facility for plotting visualizations and graphs.
+
+Scala
+
+A new breed of languages are emerging that take advantage of Java’s runtime environment, which potentially increases performance, based on the threading architecture of the platform. Scala (Scalable Language) is one of these and is being widely used by a number of startups.
+
+There are machine-learning libraries such as ScalaNLP but as Scala can access Java jar files it can also implement the likes of Classifier4J and Mahout which are covered in this book.
+
+Clojure
+
+Another JVM based language Clojure is based on the Lisp programming language. It
