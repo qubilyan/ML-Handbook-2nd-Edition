@@ -141,4 +141,22 @@ For the American equivalent we have to look at the likes of Target who run a sim
 
 The uses for machine learning in retail are obvious, mining baskets and segmenting users are key processes in order to communicate the right message to the customer. On the other hand it can too accurate and cause headaches. Target’s baby club story, that was widely cited in the press as a big privacy danger in Big Data, showed us that machine learning basically can easily know that we’re creatures of habit and when those habits change they will get noticed.
 
-For all the positive uses of machine learning there are some urban myths too. Talk of retail and data mining the “beer and diapers” story is often mentioned and ass
+For all the positive uses of machine learning there are some urban myths too. Talk of retail and data mining the “beer and diapers” story is often mentioned and associated with Walmart and other large retailers. The idea was that on a Friday the sales of beer and diapers would right together suggesting that the child’s mother was going out and dad would stock up on beer for while he was at home and diapers for the one he was looking after. It turned out to be a myth, thought this still doesn’t stop marketing companies wheeling out the story (and still believing it’s true) to organizations who want to learn from their data.
+
+Likewise the heavy metal band Iron Maiden did not mine bit-torrent data to figure out which countries were illegally downloading their songs and then fly to play to fans. Another myth that got the marketers and media very exited about Big Data and machine learning, but sadly untrue. Not to say that these can’t happen, they just haven’t happened yet.
+
+Gaming Analytics
+
+We’ve already established that checkers is a good candidate for machine learning. Do you remember those old chess computer games with the real plastic pieces? You made a move and the computer made a move. Well that’s machine learning planning algorithms in action. Fast-forward a few decades (the chess computer still feels like yesterday to me) and the console market is pumping out analytics data every time you play your favorite game.
+
+Microsoft have spent time studying the data from Halo 3 to see how players perform on certain levels but also figure out when a player is using a cheat. Fixes have been created based on the analysis of data coming back from the consoles.
+
+The same company also worked on Drivatar that is incorporated in to the driving game Forza Motorsport. When the game is first played it knows nothing about your driving style. Over a period of practice laps the system learns your style, consistency, exit speeds on corners and your positioning on the track. The sampling happens over three laps which is enough time to see how your profile behaves. As time progresses the system continues to learn from your driving patterns.
+
+If you have children you may have seen the likes of Ninendogs (or cats) where it’s your task to look after an on-screen pet. Think a Tamagotchi but on a larger scale. Algorithms can work out when the pet needs play, how to react to the owner and how hungry the pet will be.
+
+It’s early days for games companies to get machine learning into infrastructure to make the games better. With more and more games appearing on small devices such as the iPhone and Android platforms the real learning is on how to make players come back and play more and more. Analysis can be performed about the “stickiness” of the game, do players return to play again or do they drop off over a period of time in favor of something else. Ultimately there’s a trade off between the level of machine learning and gaming performance especially in smaller devices.
+
+The Internet Of Things
+
+Connected devices that can collate a
