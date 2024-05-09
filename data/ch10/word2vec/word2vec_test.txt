@@ -238,4 +238,49 @@ Weka can be downloaded from the University of Waikato website at http://www.cs.w
 
 There are versions of Weka available for Linux, Mac OSX and Windows. To install Weka on Linux it’s a case of unzipping the supplied file to a directory. On Mac OSX and Windows an installer program is supplied and will unzip all the required files for you.
 
-M
+Mahout
+
+The Mahout machine learning libraries are an open source project and now part of the Apache project. The key word is for Mahout is scalable; it will work either on a single node or a cluster of machine. There’s tight integration with the Hadoop Map/Reduce paradigm to enable large scale processing.
+
+​​There are a number of supported algorithms including:
+
+• Naive Bayes Classifier
+• K Means Clustering
+• Recommendation Engines
+• Random Forest Decision Trees
+• Logistic Regression Classifier
+
+
+There’s no workbench in Mahout as there is with the Weka toolkit but the emphasis is in integrating machine learning library code within your projects. There are a wealth of examples and ready to run programs that can be used with your existing data.
+
+Downloading And Installing
+
+You can download Mahout from http://www.apache.org/dyn/closer.cgi/mahout/[LINK: http://www.apache.org/dyn/closer.cgi/mahout/].
+
+As Mahout is platform independent there’s one download that covers all the operating systems. To install all you have to do is unzip Mahout into a directory and update your path to find the executable files.
+
+SpringXD
+
+While Weka and Mahout concentrate on algorithms and producing the knowledge we need think about acquiring data and processing it.
+
+Spring XD is a “data ingestion engine” which reads in, processes and stores raw data. It’s highly customizable with the ability to create processing units. It also integrates with all the other tools being talked about in this chapter.
+
+The project is relatively new but it’s certainly a useful one to get to grips with now as it doesn’t just relate to Internet based data it can also ingest network and system messages across a cluster of machines.
+
+Downloading And Installing
+
+The Spring XD distribution can be downloaded from http://projects.spring.io/spring-xd/ look for the “quick start” section and you will see the link for the zip file.
+
+Once the zip file has downloaded all you need to do is unzip the distribution into a directory. For a detailed walk through of using Spring XD have a look at Chapter 9 when we work with data in real time.
+
+Hadoop
+
+Unless you’ve been living on some secluded island without power and an Internet connection you will have heard about the savior of Big Data, Hadoop. While Hadoop is very good for processing Big Data it’s not a required element. We’ll be using it in Chapter 10 for working with batch processing.
+
+Hadoop is a framework for processing data in parallel, it does this using the MapReduce pattern where work is divided into blocks and distributed across a cluster of machines. You can use Hadoop on a single machine with success and this is what we will cover.
+
+There are two versions of Hadoop, we’ll be using version 1.2.1 though things are progressing in version 2. For our needs though the version 1.2.1 is going to be fine to learn on.
+
+Downloading And Installing
+
+The Apache Foundation run a series of mirror download servers and will refer you to the ones relevant to your location. The main do
