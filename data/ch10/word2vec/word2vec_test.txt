@@ -283,4 +283,43 @@ There are two versions of Hadoop, we’ll be using version 1.2.1 though things a
 
 Downloading And Installing
 
-The Apache Foundation run a series of mirror download servers and will refer you to the ones relevant to your location. The main do
+The Apache Foundation run a series of mirror download servers and will refer you to the ones relevant to your location. The main download page is at http://www.apache.org/dyn/closer.cgi/hadoop/common/ .
+
+Once you have picked your mirror site nagivate your way through to hadoop-1.2.1 releases and download the hadoop-1.2.1-bin.tar.gz. Unzip and untar the distribution to a directory.
+
+If you are running a RedHat or Debian server you can download the respective .rpm or .deb files and install them via the package installer for your operating system
+
+Using An IDE
+
+Along with favorite actor/actress, or best football team the discussion about which is the best integrated development environment (IDE) to use seems to spark furious debate within some circles.
+
+I’m an Eclipse user, I’m also an IDEA user and I have Netbeans as well. Basically I use all three. There’s no hard rule which IDE to use as they all do the same thing very well. For examples in this book though I’ll be using Eclipse (Juno release).
+
+Finding Data To Play With
+
+One question that comes up again and again with my classes is “where can I get data from?” There are a few answers to this question but it does depend on what you are trying to learn.
+
+Data comes all shapes and sizes, something we’ll discuss further in the next chapter. I strongly suggest that you take some time to hunt around the Internet for different data sets and just look through them. You’ll get a feel of how these things are put together. Sometimes it’s comma separated variable (CSV) data or it may be structured as JSON or XML.
+
+Data Repositories
+
+So, where to look? There are plenty of places to get data from. Let’s take a look at a selection of them.
+
+UC Irvine Machine Learning Repository
+
+The machine learning repository consists over 270 data sets. Included in these sets are notes on the variable name, instances and the tasks the data would be associated with.
+
+http://archive.ics.uci.edu/ml/datasets
+Infochimps
+
+The data marketplace at Infochimps has been around for a few years now. While the company has expanded to cloud based offerings the data is still available to download.
+
+http://www.infochimps.com/datasets
+Kaggle
+
+The competitions that Kaggle run have gained a lot of interest over the last couple of years. If you look at the “101” section there are some data sets to experiment with.
+
+https://www.kaggle.com/competitions
+
+
+May I emphasize the word “play” Some of the best learning comes from playing with the data. Having a question in mind that you are trying to answer with the data is a good start (and something you will see me refer to a number of times in this book) but learning comes from experimentation and improvement on results. So I’m all for playing around with the data first and seeing what works. I come from a very pragmatic background when it comes to development and learning. While the majority of publications have come from very academic backgrounds, and I fully endorse and support them, we shouldn’t discou
