@@ -191,4 +191,51 @@ There are machine-learning libraries such as ScalaNLP but as Scala can access Ja
 
 Clojure
 
-Another JVM based language Clojure is based on the Lisp programming language. It
+Another JVM based language Clojure is based on the Lisp programming language. It’s designed for concurrency, which makes it a great candidate for machine learning applications on large sets of data.
+
+Ruby
+
+While many people know the Ruby language by association with the Ruby On Rails web development framework it’s also used as a standalone language. The best way to integrate machine learning frameworks is to look at JRuby which is a JVM based alternative, this means you can access the Java machine learning libraries.
+
+Language Summary
+
+As with most languages there is a lot of cross over in functionality. With the languages that access the JVM there’s a good chance that you’ll be access Java based libraries. There’s no such thing as one language being “better” than another. It’s a case of picking the right tool for the job. For the remainder of the book I’ll be using Java.
+
+Software Used In This Book
+
+For the hands on elements in the book we’ll be using a number of programs and packages to get our algorithms and machine learning working.
+
+To keep things easy I strongly advise that you create a directory on your system to install all these packages. I’m going to call mine “mlbook”.
+
+$mkdir ~/mlbook
+$cd ~/mlbook
+Checking The Java Version
+
+As the programs we’re installing rely on Java we’ll quickly check the version, the programs we’re working with will require Java 1.6 or above. To check open up a terminal window and run the following:
+
+$ java -version
+java version "1.7.0_40"
+Java(TM) SE Runtime Environment (build 1.7.0_40-b43)
+Java HotSpot(TM) 64-Bit Server VM (build 24.0-b56, mixed mode)
+If you are running below 1.6 then you will need to upgrade your Java version. You can download the more up to date version from http://www.oracle.com/technetwork/java/javase/downloads/index.html[LINK: http://www.oracle.com/technetwork/java/javase/downloads/index.html]
+
+Weka Toolkit
+
+The Weka (Waikato Environment for Knowledge Acquisition) is a machine learning and data mining toolkit written in Java by the University of Waikato in New Zealand.
+
+It provides a suite of tools for learning and visualization via the supplied workbench program or the command line. Weka also enables you to retrieve data from existing data sources that have a JDBC driver. With Weka you can do the following:
+
+• Pre-process data
+• Clustering
+• Classification
+• Regression
+• Association rules
+The Weka toolkit is widely used and now supports the Big Data aspects by interfacing with Hadoop for clustered mining.
+
+Downloading And Installing
+
+Weka can be downloaded from the University of Waikato website at http://www.cs.waikato.ac.nz/ml/weka/downloading.html[LINK: http://www.cs.waikato.ac.nz/ml/weka/downloading.html].
+
+There are versions of Weka available for Linux, Mac OSX and Windows. To install Weka on Linux it’s a case of unzipping the supplied file to a directory. On Mac OSX and Windows an installer program is supplied and will unzip all the required files for you.
+
+M
