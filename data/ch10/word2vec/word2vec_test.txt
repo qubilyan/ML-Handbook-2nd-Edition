@@ -322,4 +322,10 @@ The competitions that Kaggle run have gained a lot of interest over the last cou
 https://www.kaggle.com/competitions
 
 
-May I emphasize the word “play” Some of the best learning comes from playing with the data. Having a question in mind that you are trying to answer with the data is a good start (and something you will see me refer to a number of times in this book) but learning comes from experimentation and improvement on results. So I’m all for playing around with the data first and seeing what works. I come from a very pragmatic background when it comes to development and learning. While the majority of publications have come from very academic backgrounds, and I fully endorse and support them, we shouldn’t discou
+May I emphasize the word “play” Some of the best learning comes from playing with the data. Having a question in mind that you are trying to answer with the data is a good start (and something you will see me refer to a number of times in this book) but learning comes from experimentation and improvement on results. So I’m all for playing around with the data first and seeing what works. I come from a very pragmatic background when it comes to development and learning. While the majority of publications have come from very academic backgrounds, and I fully endorse and support them, we shouldn’t discourage learning machine learning by doing.
+
+Conclusion
+
+In this chapter we’ve looked at what machine learning is, how it can be applied to different areas of business and also covered the tools we’ll be using during the remainder of the book.
+
+The next chapter we will look at planning for machine learning. This looks at data science teams, cleaning, different methods of processing data and also an overview of some handy Unix commands.
